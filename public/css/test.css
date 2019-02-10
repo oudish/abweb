@@ -1,0 +1,173 @@
+body{
+  margin: 0;
+  padding: 0; 
+}
+
+#wrapper{
+  position: relative;
+  height: 100vh;
+}
+
+#slider-area{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+/*  left: 0;*/
+}
+
+#slider-area .owl-item div{
+  height: 100vh;
+  max-width: 100vw;
+  padding: 30px;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+#wrapper #nav-area{
+  position: absolute;
+  top: 5%;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.nav a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.slider-text{
+  position: absolute;
+  left: 40%;
+  z-index: 10;
+  top: 40%;
+  text-align: center;
+}
+
+.slider-text h2{
+  text-transform: uppercase;
+  font-style: 40px;
+  color: #fff;
+}
+
+.slider-text p{
+  font-style: 10px;
+  color: #fff;
+}
+
+.slider-text a{
+  text-decoration: none;
+  text-transform: uppercase;
+  background: tomato;
+  padding: 15px 25px;
+  -webkit-border-radius:25px;
+  -moz-border-radius:25px;
+  border-radius: 25px;
+  color: #fff;
+}
+/*body{
+  overflow-x: hidden;
+}
+.container{
+
+  height: 100vh;
+  width: 100%;*/
+/*  background-color: red;*/
+ 
+/*
+}
+
+.navigation{
+
+  top:0;
+  width:100%;
+  z-index:1;
+}
+
+.navbar-right{
+  float:right;
+  padding-right:5%;
+}
+
+.navbar-right a{
+  text-decoration:none;
+  padding:10px;
+  color: #fff;
+  font-family:Arial;
+  font-weight:900;
+}
+
+.navbar-right a:hover{
+  text-decoration:underline;
+}
+.navbar-logo{
+  padding-left:5%;
+  font-family:Arial;*/
+  /*font-size:10px;*/
+/*  font-weight:bold;
+  text-decoration:none;
+  color:#fff; 
+}
+
+.video-container {
+z-index: -100;
+width:100%;
+height:100%;
+overflow:hidden;
+position:absolute;
+top:0;
+left:0;
+}
+
+#video-bg{
+  width:100%;
+ 
+}
+
+.portfolio-section{
+  margin-top:50%;
+}
+.tagline-left{
+  float:left;
+  width:50%;
+  text-align:center;
+}
+
+.tagline-right{
+  float:right;
+  width:50%;
+  text-align:center;
+}
+
+.tagline-video{
+  width:75%;
+}
+
+.tagline-right-text{
+ position:absolute;
+ margin-top:9%;
+ text-align:center;
+ margin-left:17%;
+font-family:Arial;
+ color:#fff;
+  width:290px;
+  font-size:40px;
+}
+
+.tagline-left-text{
+ position:absolute;
+ margin-top:9%;
+ text-align:center;
+ margin-left:11%;
+font-family:Arial;
+ color:#fff;
+  width:375px;
+  font-size:40px;
+}
+*/
+

@@ -1,0 +1,182 @@
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+.imgbox {
+    display: grid;
+    height: 100%;
+}
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+@keyframes example {
+    0% { 
+        transform: scale(0.2); 
+    }
+    70%{
+        transform: scale(1); 
+    }
+    100% {
+       transform: scale(1); 
+    }
+}
+
+.center-fit {
+    animation-duration: 2s;
+    animation-fill-mode:both;
+    animation-name: example;
+    transform: scale(0.2); 
+}
+
+.card{
+    position: relative;
+    border: none;
+}
+.card img:hover{
+    opacity: .8; 
+    transition: .5s; 
+}
+.card-body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.card:after{
+    content: "\f218";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-family: "fontAwesome";
+    font-size: 25px;
+    color: red;
+    transition: .5s;
+    opacity: .5;
+}
+
+.card:hover:after{
+    opacity: .9
+}
+
+
+.top-buffer { margin-top:20px; margin-bottom: 20px}
+
+.owl-carousel .item{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+.parallax {
+  
+  /* Set a specific height */
+
+  min-height: 550px; 
+
+  /* Create the parallax scrolling effect */
+  background-position: top;
+  background-attachment: fixed;
+ /* background-position: center;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navigation{
+  padding-top:30px;
+  padding-bottom:30px;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:1;
+}
+
+.navbar-right{
+  float:right;
+  padding-right:10%;
+}
+
+.navbar-right a{
+  text-decoration:none;
+  padding:10px;
+  color: #fff;
+  font-family:Arial;
+  font-weight:900;
+}
+
+.navbar-right a:hover{
+  text-decoration:underline;
+}
+.navbar-logo{
+  padding-left:10%;
+  font-family:Arial;
+  font-size:30px;
+  font-weight:bold;
+  text-decoration:none;
+  color:#fff; 
+}
+
+.video-container {
+z-index: -100;
+width:100%;
+height:100%;
+overflow:hidden;
+position:absolute;
+top:0;
+left:0;
+}
+
+#video-bg{
+  width:100%;
+  
+}
+
+.portfolio-section{
+  margin-top:50%;
+}
+.tagline-left{
+  float:left;
+  width:50%;
+  text-align:center;
+}
+
+.tagline-right{
+  float:right;
+  width:50%;
+  text-align:center;
+}
+
+#test{
+  float:right;
+  width:50%;
+  margin-left: 100%;
+}
+
+.tagline-video{
+  width:50%;
+}
+
+.tagline-right-text{
+ position:absolute;
+ margin-top:9%;
+ text-align:center;
+ margin-left:17%;
+font-family:Arial;
+ color:#fff;
+  width:290px;
+  font-size:40px;
+}
+
+.tagline-left-text{
+ position:absolute;
+ margin-top:9%;
+ text-align:center;
+ margin-left:11%;
+font-family:Arial;
+ color:#fff;
+  width:375px;
+  font-size:40px;
+}

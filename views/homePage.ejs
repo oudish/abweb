@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<%- include('head.ejs') %>
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+</head>
+<body class="background">
+
+		<%- include('header.ejs') %>
+		<!--  Content  -->
+		<!-- <div class="testCont">
+				<article>
+				<h1>GROSS DESIGN co. <br /> <span>(Made by Matt Gross</a>, for EvenVision</a>)</span></h1>
+				</article> -->
+				
+				<!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->
+				<!-- <video autoplay loop id="video-background" muted plays-inline>
+				<source src="https://player.vimeo.com/external/158148793.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6f&profile_id=119&oauth2_token_id=57447761" type="video/mp4">
+				</video>
+
+		</div> -->
+
+		<div id="mybutton1">
+			<button class="feedback">MEN</button>
+		</div>
+		<div id="mybutton2">
+			<button class="feedback">WOMEN</button>
+		</div>
+
+		<div class="example" id="example" style="padding-top: 50px" ng-app="myModuleHomeDb" ng-controller="myControllerHomeDb" ng-init=detectmob() >
+			helloworld  {{50+50}}
+			<div class="autowide">
+				<div class="module" ng-repeat="x in records track by $index">
+						<img src="{{x}}" alt="" />
+					<!-- <img src="{{x}}" alt="" /><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores sequi sint ipsa alias amet. Numquam voluptatum maiores. Ab repellat dolores quo quas quam quasi voluptatem delectus aperiam. Deleniti accusamus dolore!</p> -->
+				</div>
+			</div>
+		</div>	
+			
+	<%- include('bottomJavaScriptLink.ejs') %>
+	<script type="text/javascript">
+		var app = angular.module("myModuleHomeDb", []);
+		app.controller("myControllerHomeDb", function($scope) {
+			$scope.records = [
+				"uploads/AB03.png",
+				"uploads/ABW01.png",
+				// "uploads/AB03.png",
+				// "uploads/AB04.png",
+				// "uploads/AB05.png",
+				// "uploads/AB03.png",
+				// "uploads/AB04.png",
+				// "uploads/AB05.png",
+				// "uploads/AB03.png",
+				// "uploads/AB04.png",
+				// "uploads/AB04.png",
+				// "uploads/AB05.png",
+				// "uploads/AB03.png",
+				// "uploads/AB03.png",
+			];
+
+			$scope.recordsWomen = [
+				"uploads/ABW01.png",
+				// "uploads/ABW02.png",
+				// "uploads/ABW03.png",
+				// "uploads/ABW04.png",
+				// "uploads/ABW05.png",
+				// "uploads/ABW01.png",
+				// "uploads/ABW02.png",
+				// "uploads/ABW03.png",
+				// "uploads/ABW04.png",
+				// "uploads/ABW05.png",
+				// "uploads/ABW01.png",
+				// "uploads/ABW02.png",
+				// "uploads/ABW03.png",
+				
+			];
+
+
+			// $(".categoryClothing").click(function (e) {
+			// 	e.preventDefault();
+			// 	//alert($(this).text());
+			// 	if($(this).text() == "T-shirts"){
+			// 		//document.getElementById("example").style = "visibility:visible";
+			// 		//document.getElementById("mybutton1").style = "visibility:visible";
+			// 		//document.getElementById("mybutton2").style = "visibility:visible";
+			// 		//$(".mega-drop-down").show();
+			// 	}
+			// });
+			
+			// var app = angular.module('myModuleHomeDb', []);
+			// app.controller('myControllerHomeDb', function($scope, $http) {
+				$scope.detectmob = function() { 
+					if( navigator.userAgent.match(/Android/i)
+						|| navigator.userAgent.match(/webOS/i)
+						|| navigator.userAgent.match(/iPhone/i)
+						|| navigator.userAgent.match(/iPad/i)
+						|| navigator.userAgent.match(/iPod/i)
+						|| navigator.userAgent.match(/BlackBerry/i)
+						|| navigator.userAgent.match(/Windows Phone/i)
+						){//mobile
+						alert("mobile");
+					}
+					else {//computer
+						alert("computer");
+					
+					}
+				}
+			// });
+		});
+	
+	</script>
+</body>
+</html>
