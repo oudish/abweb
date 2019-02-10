@@ -6,10 +6,25 @@
 </head>
 <body  ng-app="myModuleHomeDb" ng-controller="myControllerHomeDb" ng-init=detectmob()>
 
-	<div class="headerTab">
-		<button class="tablinks" id="MENN" ng-click="openHeader(event, 'MEN')">MEN</button>
-		<button class="tablinks" id="WOMENN" ng-click="openHeader(event, 'WOMEN')" >WOMEN</button>
+	<div class="headerTab" id='myDIV'><!-- CKA-10/02/19-Added id -->
+		<button class="btn active" id="MENN" ng-click="openHeader(event, 'MEN')">MEN</button>
+		<button class="btn" id="WOMENN" ng-click="openHeader(event, 'WOMEN')" >WOMEN</button>
 	</div>
+
+	<script>
+		// CKA-10/02/19--Add active class to the current button (highlight it)
+		var header = document.getElementById("myDIV");
+		var btns = header.getElementsByClassName("btn");
+		var count = btns.length;
+		for (var i = 0; i < count; i++) {
+		  btns[i].addEventListener("click", function() {
+		  var current = document.getElementsByClassName("active");
+		  current[0].className = current[0].className.replace(" active", "");
+		  this.className += " active";
+		  });
+		}
+	</script>
+	
 	<div id="MEN" class="headerTabcontent">
 		<div id="headerMEN"><%- include('headerMEN.ejs') %></div>
 		<div id="sideNavMobileMEN"><%- include('sideNavMobile.ejs') %></div>

@@ -53,7 +53,7 @@ ul{
 
 }
 
-.exo-menu > li {  display: inline-block;  float:left;}
+.exo-menu > li {  display: inline-block;  float:none;}
 .exo-menu > li > a{
   color: #ccc;
   text-decoration: none;
@@ -80,6 +80,37 @@ li:focus {
     background: rgb(233, 225, 225);
     cursor: pointer;
 }
+
+/*CKA-10/02/19-New added feature- active the menu item being hovered*/ 
+.active2:hover,
+.active2:focus{
+  background: rgb(100, 99, 99);
+  cursor: pointer;
+  color:white;
+}
+
+/* Style the buttons */
+/* .btn {
+  border: none;
+  outline: none;
+  /* padding: 10px 16px; */
+  /* background-color: #f1f1f1; */
+  /* cursor: pointer; */
+  /* font-size: 18px; 
+} */
+/*CKA-10/02/19- Style the active class, and buttons on mouse-over */
+.btn:hover, .btn:focus {
+  background-color: rgb(100, 99, 99);
+  background: rgb(100, 99, 99);
+  color: white;
+}
+/*CKA-10/02/19- Style the active class, and buttons on mouse-over */
+.active, .btn:hover, .btn:focus {
+  background-color: rgb(100, 99, 99);
+  background: rgb(100, 99, 99);
+  color: white;
+}
+
 /*CKA-03/02/19*/
 .exo-menu i {
   float: left;
