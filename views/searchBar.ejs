@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- CKA-16/02/19-dd/mm/yy-Added Search bar -->
+        <style>
+                     
+          * {
+            box-sizing: border-box;
+          }
+
+          #searchBarTopnav a.active {
+            background-color: #2196F3;
+            color: white;
+          }
+
+          #searchBarTopnav {
+            overflow: hidden;
+             background-color: black;
+           }
+
+          #searchBarTopnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            /* padding: 14px 16px; */
+            text-decoration: none;
+            font-size: 17px;
+          }
+          
+          form.searchbarForm input[type=text] {
+            padding: 6px;
+            font-size: 17px;
+            border: none;
+            float: left;
+            width: 90%;
+            background: #f1f1f1; 
+            margin-top: 8px;
+            border-radius:6px;
+          }
+          
+          form.searchbarForm button {
+            float: left;
+            width: 10%;
+            padding: 6px;
+            /* background: #ddd; */
+            color: white;
+            font-size: 17px;
+            border: none;
+            border-left: none;
+            cursor: pointer;
+            border-radius:2px;
+            margin-top: 8px;
+            /* border: 1px solid #ccc;  */
+          }
+          
+          form.searchbarForm button:hover {
+            background: black;
+          }
+         
+          form.searchbarForm::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+
+          #searchBarTopnav input[type=text] {
+            border: 1px solid #ccc;  
+          }
+          #searchBarTopnav .btn{
+            border-radius:0%;  
+          }
+          </style>
+
+<div id="searchBarTopnav" class="topnav">
+    <a ><button class="btn active" id="MENN" ng-click="openHeader(event, 'MEN')">MEN</button></a>
+    <a><button class="btn" id="WOMENN" ng-click="openHeader(event, 'WOMEN')" >WOMEN</button></a>
+    <div class="search-container">
+      <form class="searchbarForm" action="#" style="margin:auto;max-width:400px;border-radius:6px;">
+        <input  type="text" placeholder="Search.." name="search">
+        <!-- <i class="fa fa-search"></i> -->
+        <button text="Search"  type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      
+    </div>
+  </div>
