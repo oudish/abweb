@@ -2,7 +2,7 @@
 .headerTab {
     overflow: hidden;
     /* border: 1px solid #ccc; */
-    background-color: #f1f1f1;
+    background-color: white;
   }
   
   /* Style the buttons inside the tab */
@@ -19,12 +19,12 @@
   
   /* Change background color of buttons on hover */
   .headerTab button:hover {
-    background-color: #ddd;
+    background-color: rgb(100, 99, 99);
   }
   
   /* Create an active/current tablink class */
   .headerTab button.active {
-    background-color: #ccc;
+    background-color: rgb(100, 99, 99);
   }
   
   /* Style the tab content */

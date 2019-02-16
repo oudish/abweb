@@ -5,10 +5,9 @@
 	<%- include('head.ejs') %>
 </head>
 <body  ng-app="myModuleHomeDb" ng-controller="myControllerHomeDb" ng-init=detectmob()>
-
-	<div class="headerTab" id='myDIV'><!-- CKA-10/02/19-Added id -->
-		<button class="btn active" id="MENN" ng-click="openHeader(event, 'MEN')">MEN</button>
-		<button class="btn" id="WOMENN" ng-click="openHeader(event, 'WOMEN')" >WOMEN</button>
+	
+	<div class="headerTab" id='myDIV' style="background-color:black;"><!-- CKA-10/02/19-Added id -->
+		<%- include('searchBar.ejs') %>
 	</div>
 
 	<script>
