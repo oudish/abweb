@@ -55,9 +55,10 @@ ul{
 
 .exo-menu > li {  display: inline-block;  float:none;}
 .exo-menu > li > a{
-  color: #ccc;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
+  font: 400 12px sans-serif;
 /* border-right: 1px #365670 dotted; */
   border-right: 1px rgb(100, 99, 99) ;/*CKA-03/02/19-dd/mm/yy-change blue to grey*/
   -webkit-transition: color 0.2s linear, background 0.2s linear;
