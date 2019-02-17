@@ -1,0 +1,78 @@
+= Options
+:toc:
+:toc-placement!:
+
+The widget options can be set at the time of creation:
+[source, javascript]
+var $img = $("#image1").imgViewer2({
+	zoomMax: 6,
+	onClick: function( e, pos ) {
+				$("#position").html("relx: " + pos.x + " rely: " + pos.y + " zoom: " + this.getZoom() );
+	}
+});
+
+or afterwards by:
+[source, javascript]
+$img.imgViewer2("option", "zoomMax", 6);
+
+The current value of an option can be retrieved by:
+[source, javascript]
+$img.imgViewer2("option", "zoomMax");
+
+toc::[]
+
+== dragable - controls if image will be dragable
+  * Default: true
+  * Example - to disable image dragging:
+
+[source, javascript]
+$("#image1").imgViewer2("option", "dragable", false);
+
+== zoomable - controls if image will be zoomable
+  * Default: true
+  * Example - to disable image zooming:
+
+[source, javascript]
+$("#image1").imgViewer2("option", "zoomable", false);
+
+== zoomStep - how much the zoom changes for each mousewheel click
+  * must be a positive number
+  * Default: 0.5
+  * Example:
+
+[source, javascript]
+$("#image1").imgViewer2("option", "zoomStep", 1.0);
+
+== zoomMax - get/set the limit on the maximum zoom level of the image
+  * must be >= 1
+  * Default: null ie no limit on zoom
+  * Example - to restrict zoom to 3x or less:
+
+[source, javascript]
+$("#image1").imgViewer2("option", "zoomMax", 3);
+
+== onClick - callback triggered by a mouseclick on the image
+  * within the callback "this" refers to the imgViewer widget.
+  * Default: null
+  * Callback Arguments:
+    * e: the original click event object
+    * pos: 	javascript object with the relative image coordinates
+        * { x: relative x image coordinate, y: relative y image coordinate }
+  * Example - to display the relative image coordinate clicked (relative image coordinates range from 0 to 1
+   where 0,0 correspondes to the topleft corner and 1,1 the bottom right):
+
+[source, javascript]
+$("#image1").imgViewer2("option", "onClick", function(e, pos) {
+	$("#click_position").html(pos.x + " " + pos.y);
+});
+
+== onReady - callback triggered when the widget has been all set up and is ready to be used
+  * within the callback "this" refers to the imgViewer widget.
+  * Default: null
+  * Callback Arguments: none
+  * Example - to set the zoom to 3 and move to the bottom right hand corner
+
+[source, javascript]
+$("#image1").imgViewer2("option", "onReady", function() {
+	this.setZoom(3).panTo(1,1);
+});

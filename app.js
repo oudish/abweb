@@ -139,6 +139,25 @@ app.get('/sideNavMobile',(req,res) =>{
 	res.render('sideNavMobile');
 });
 
+app.get('/viewProduct',(req,res) =>{
+	res.render('viewProduct');
+});
+
+app.get('/viewProduct2',(req,res) =>{
+	res.render('viewProduct2');
+});
+
+app.get('/testView',(req,res) =>{
+	res.render('testView');
+});
+
+app.get('/testViewing',(req,res) =>{
+	res.render('testViewing');
+});
+app.get('/pinch',(req,res) =>{
+	res.render('pinch');
+});
+
 app.post('/loginSignUpPage',(req,res) =>{
 	const {email, password} = req.body
 	if(email && password){
