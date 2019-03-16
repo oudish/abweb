@@ -46,10 +46,8 @@ app.use(session({
 		maxAge: SESS_LIFETIME,
 		sameSite: true,
 		secure: IN_PROD,//true in production
-
 	}
   }))
-
 
 app.set('view engine', 'ejs');
 
@@ -73,8 +71,6 @@ const redirectHome = (req, res, next) => {
 		next()
 	}
 }
-
-
 
 app.get('/',(req,res) =>{
 	//res.render('clothingPage');
@@ -117,13 +113,9 @@ app.get('/home', (req, res) => {
 	//res.render('home');
 });
  
-
+// var tools = require('./routes/index2');
 app.get('/login',(req,res) =>{
 	res.render('login');
-});
-
-app.get('/testtt',(req,res) =>{
-	res.render('testtt');
 });
 
 app.get('/register',(req,res) =>{
@@ -134,28 +126,12 @@ app.get('/loginSignUpPage',(req,res) =>{
 	res.render('loginSignUpPage');
 });
 
-
 app.get('/sideNavMobile',(req,res) =>{
 	res.render('sideNavMobile');
 });
 
-app.get('/viewProduct',(req,res) =>{
-	res.render('viewProduct');
-});
-
-app.get('/viewProduct2',(req,res) =>{
-	res.render('viewProduct2');
-});
-
-app.get('/testView',(req,res) =>{
-	res.render('testView');
-});
-
-app.get('/testViewing',(req,res) =>{
-	res.render('testViewing');
-});
-app.get('/pinch',(req,res) =>{
-	res.render('pinch');
+app.get('/testmy',(req,res) =>{
+	res.render('testmy');
 });
 
 app.post('/loginSignUpPage',(req,res) =>{
@@ -222,24 +198,12 @@ app.post('/logout', redirectLogin,(req,res) =>{
 	})
 });
 
-
-
-
-
-app.get('/index1',(req,res) =>{
-	res.render('index1');
-});
-
 app.get('/homePage',(req,res) =>{
 	res.render('homePage');
 });
 
 app.get('/clothingPage',(req,res) =>{
 	res.render('clothingPage');
-});
-
-app.get('/test',(req,res) =>{
-	res.render('test');
 });
 
 

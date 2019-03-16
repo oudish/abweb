@@ -1,0 +1,91 @@
+<script>
+
+    var app = angular.module("myModuleHomeDb", []);
+    app.controller("myControllerHomeDb", function($scope) {
+    
+
+        function myFunction(x) {
+			if (x.matches) { // If media query matches
+				if(document.getElementById("MEN").style.display == "block"){
+					//alert("men min");
+					document.getElementById("sideNavMobileMEN").style = "visibility: visible";
+					document.getElementById("headerMEN").style = "visibility: hidden";
+				}
+				else if(document.getElementById("WOMEN").style.display == "block"){
+					//alert("women min");
+					document.getElementById("sideNavMobileWOMEN").style = "visibility: visible";
+					document.getElementById("headerWOMEN").style = "visibility: hidden";
+				}
+			} 
+			else {
+				if(document.getElementById("MEN").style.display == "block"){
+					//alert("men max");
+					document.getElementById("headerMEN").style = "visibility: visible";
+					document.getElementById("sideNavMobileMEN").style = "visibility: hidden";
+				}
+				else if(document.getElementById("WOMEN").style.display == "block"){
+					//alert("women max");
+					document.getElementById("headerWOMEN").style = "visibility: visible";
+					document.getElementById("sideNavMobileWOMEN").style = "visibility: hidden";
+				}	
+			}
+		}
+
+        $scope.openHeader = function(evt, gender) { 
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("headerTabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            if(document.getElementById(gender).id == "MEN"){
+                document.getElementById(gender).style.display = "block";
+                if (x.matches) { // If media query matches
+                    //alert("men min fix");
+                    document.getElementById("sideNavMobileMEN").style.visibility = "visible";
+                    document.getElementById("headerMEN").style.visibility = "hidden";
+                }
+                else{
+                    //alert("man max fix");
+                    document.getElementById("headerMEN").style.visibility = "visible";
+                    document.getElementById("sideNavMobileMEN").style.visibility = "hidden";
+                }
+            }
+            
+            else if(document.getElementById(gender).id == "WOMEN"){
+                document.getElementById(gender).style.display = "block";
+                if (x.matches) { // If media query matches
+                    if(document.getElementById("MEN").style.display == "block"){
+                        //alert("men min fix");
+                        document.getElementById("sideNavMobileMEN").style.visibility = "visible";
+                        document.getElementById("headerMEN").style.visibility = "hidden";
+                    }
+                    else if(document.getElementById("WOMEN").style.display == "block"){
+                        //alert("women min fix");
+                        document.getElementById("sideNavMobileWOMEN").style.visibility = "visible";
+                        document.getElementById("headerWOMEN").style.visibility = "hidden";
+                    }
+                } 
+                else {
+                    if(document.getElementById("MEN").style.display == "block"){
+                        //alert("men max fix");
+                        document.getElementById("headerMEN").style.visibility = "visible";
+                        document.getElementById("sideNavMobileMEN").style.visibility = "hidden";
+                    }
+                    else if(document.getElementById("WOMEN").style.display == "block"){
+                        //alert("women max fix");
+                        document.getElementById("headerWOMEN").style.visibility = "visible";
+                        document.getElementById("sideNavMobileWOMEN").style.visibility = "hidden";
+                    }	
+                }
+            }
+            evt.currentTarget.className += " active";
+
+        }
+    
+    });
+</script>
