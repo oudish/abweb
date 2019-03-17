@@ -52,7 +52,7 @@ ul{
   float: left;
   list-style: none;
   position:relative;
-  background: rgb(100, 99, 99);/*CKA-03/02/19-dd/mm/yy-change menubar color to grey*/
+  background:#525050;/*CKA-03/02/19-dd/mm/yy-change menubar color to grey*/
 
 }
 
@@ -88,7 +88,7 @@ li:focus {
 /*CKA-10/02/19-New added feature- active the menu item being hovered*/ 
 .active2:hover,
 .active2:focus{
-  background: rgb(100, 99, 99);
+  background:#525050;
   cursor: pointer;
   color:white;
 }
@@ -104,14 +104,14 @@ li:focus {
 } */
 /*CKA-10/02/19- Style the active class, and buttons on mouse-over */
 .btn:hover, .btn:focus {
-  background-color: rgb(100, 99, 99);
-  background: rgb(100, 99, 99);
+  background-color: #525050;
+  background: #525050;
   color: white;
 }
 /*CKA-10/02/19- Style the active class, and buttons on mouse-over */
 .active, .btn:hover, .btn:focus {
-  background-color: rgb(100, 99, 99);
-  background: rgb(100, 99, 99);
+  background-color: #525050;
+  background: #525050;
   color: white;
 }
 

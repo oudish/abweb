@@ -23,12 +23,13 @@ html {
   
   /* Change background color of buttons on hover */
   .headerTab button:hover {
-    background-color: rgb(100, 99, 99);
+    /* background-color: rgb(100, 99, 99); */
+    background-color:#525050;
   }
   
   /* Create an active/current tablink class */
   .headerTab button.active {
-    background-color: rgb(100, 99, 99);
+    background-color: #525050;
   }
   
   /* Style the tab content */
